@@ -139,7 +139,10 @@ var myCar = {
 
 // Code here
 
-// var recordCleaner = () =>
+//  var recordCleaner = () => {
+//    for(let i = 0, i < accidents.length, i++) {
+//    accidents[i].atFaultForAccident.false;
+// }
 
 
 
