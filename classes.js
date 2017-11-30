@@ -1,4 +1,3 @@
-
 // Classes
 
 /*
@@ -22,51 +21,81 @@ Each employee can:
 call your class Employee and receive all the data in the constructor in the order listed
 */
 
+//
+//
+// Next, make a manager for Widget Co.
+// The manager has all the same properties as an Employee.
+// They also have :
+//
+// - reports (other employees) that defaults to an empty array
+// They can (methods) :
+//    - hire (employee)
+//         : Accepts a new employee as a parameter and pushes it to their list of reports
+//    - fire(index)
+//         : Fire removes employees from their list of reports at the given index
+//
+// call your class Manager
+//
+// */
+class Manager extends Employee {
+	// redfines without having to write out whole makeWidget(){   }
+	constructor(first_name, last_name, email, age) {
+		super(first_name, last_name, email, age);
+		this.reports = [];
+	}
+	hire(employee) {
+		this.reports.push(employee);
+	}
+	fire(index) {
+		this.reports.splice(i, 1);
+	}
+}
+// /
+// Manager for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
+// Progressive Managers have all the same properties as the manager, but
+// they also have :
+// - title - default 'Not a manager'
+// - bonus - default 0
+//
+// When employees are added or removed we need to check and update their title.  Their titles are as follows:
+// 0 : Not a manager
+// 1-3 : Barely Manager
+// 4-10 : Mostly Manager
+// 11-50 : Manager
+// 51-100 : Manager Plus
+// 101+ : Bestest Manager
+//
+// Everytime they fire an employee they get $100 added to their bonus.
 
-
-/*
-
-Next, make a manager for Widget Co.
-The manager has all the same properties as an Employee.
-They also have :
-
-- reports (other employees) that defaults to an empty array
-They can (methods) :
-   - hire (employee)
-        : Accepts a new employee as a parameter and pushes it to their list of reports
-   - fire(index)
-        : Fire removes employees from their list of reports at the given index
-
-call your class Manager
-
-*/
-
-
-
-
-
-/*
-Manager for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
-Progressive Managers have all the same properties as the manager, but
-they also have :
-- title - default 'Not a manager'
-- bonus - default 0
-
-When employees are added or removed we need to check and update their title.  Their titles are as follows:
-0 : Not a manager
-1-3 : Barely Manager
-4-10 : Mostly Manager
-11-50 : Manager
-51-100 : Manager Plus
-101+ : Bestest Manager
-
-Everytime they fire an employee they get $100 added to their bonus.
-
-call your class ProgressiveManager
-*/
-
-
-
+// call your class ProgressiveManager
+//
+class ProgressiveManager extends employee{
+  constructor (first_name, last_name, email) {
+	  super(props)
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.email = email;
+		this.age = age;
+		this.reports = [];
+		this.title = 'Not a Manager'
+		this.bonus = 0;
+	}
+  hire (employee){
+	this.reports.push(employee);
+		if(this.reports.length === 0){
+			this.title = 'Not a Manager'
+		}
+		else if(this.reports.length < 4){
+			this.title = 'Barely a Manager'
+		}
+		else if(this.reports.length < 11){
+			this.title = 'Mostly Manager'
+		}
+  }
+  fire(index) {
+	this.reports.splice(index, 1)
+		this.bonus += 100;
+  }
 
 /*
 BLACK DIAMOND

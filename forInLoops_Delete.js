@@ -19,7 +19,8 @@
 //   console.log(values[key])
 // }
 
-// In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
+// In this next example, we are accessing the property names themselves. 
+// Uncomment the code below, run it and look at what prints in the console.
 
 // for(var key in values) {
 //   console.log(key)
@@ -29,17 +30,25 @@
 // ========================
 
 
-// Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
+// Inside the function showValues, write a for in loop that concatenates each 
+// of the property values and returns the concatenated string.
 
 function showValues( obj ) {
-  // CODE HERE
+  let string = '';
+  for (let key in obj) {
+    string += obj[key];
+  }
+  return string;
 }
+console.log(showValues());
 
 
 // ========================
 
 
-// Write a function called greaterThan10 that takes in an object. Write a for in loop that loops over the object and changes any value that is great than 10 to 0. Return the updated object.
+// Write a function called greaterThan10 that takes in an object. 
+// Write a for in loop that loops over the object and changes any value 
+// that is great than 10 to 0. Return the updated object.
 
 // CODE HERE
 
@@ -57,9 +66,22 @@ function showValues( obj ) {
 // ========================
 
 
-// Write a function called secrets that will take in an object. Create an empty string variable. Write a for in loop that loops over the object. If the property name starts with an 'sh', concatenate the value to the string variable. By the end of the for in loop, you should have a sentence, return that sentence.
+// Write a function called secrets that will take in an object. 
+// Create an empty string variable. Write a for in loop that loops over the object. 
+// If the property name starts with an 'sh', concatenate the value to the 
+// string variable. By the end of the for in loop, you should have a sentence, 
+// return that sentence.
 
 // CODE HERE
+const secrets = obj => {
+  let str = "";
+  for(let key in obj) {
+    if(key.substr(0, 2) === "sh") {
+      str += obj[key];
+    }
+  }
+  return str;
+};
 
 
 // ========================
