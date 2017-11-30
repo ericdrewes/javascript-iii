@@ -91,6 +91,15 @@ class ProgressiveManager extends employee{
 		else if(this.reports.length < 11){
 			this.title = 'Mostly Manager'
 		}
+		else if(this.reports.length < 51){
+			this.title = 'Manager'
+		}
+		else if(this.reports.length < 101){
+			this.title = 'Manager Plus'
+		}
+		else {
+			this.title = 'Bestest Manager'
+		}
   }
   fire(index) {
 	this.reports.splice(index, 1)
