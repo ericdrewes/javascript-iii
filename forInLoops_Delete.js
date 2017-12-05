@@ -54,8 +54,13 @@ console.log(showValues());
 function greaterThan10(obj){
 
   for (let key in obj) {
+    if( obj.key > 10) {
+      obj.key = 0;
+    }
   }
+  return obj;
 }
+
 
 
 

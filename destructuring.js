@@ -36,9 +36,18 @@ function totalPopulation(obj) {
 
 // ========================
 
-// Write a function called ingredients that will take in an object. This object will have 3 properties named carb, fat, and protein. The property values will be strings. Use object destructuring to save the property values to new variables. Push these new variables to an array and return the array.
+// Write a function called ingredients that will take in an object. 
+// This object will have 3 properties named carb, fat, and protein. 
+// The property values will be strings. Use object destructuring to save the property values 
+// to new variables. Push these new variables to an array and return the array.
 
 // CODE HERE
+function ingredients(obj){
+	let newIngredients = [];
+	let {carb, fat, protein} = obj
+	newIngredients.push(carb, fat, protein)
+	return newIngredients;
+}
 
 // ========================
 
@@ -51,6 +60,8 @@ function totalPopulation(obj) {
 // Write a function called largeNumbers that will take a destructured object as it's parameter. The object properties will be named first, second, and third and their values will be numbers. Find the smallest number of the three and return that number.
 
 // CODE HERE
+
+function largeNumbers({first, second, third})
 
 // ========================
 
