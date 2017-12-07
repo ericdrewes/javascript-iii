@@ -79,4 +79,14 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 {"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
 {"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}]
 
-let bobsTotal // Your code here
+
+function cb(acc, cur) {
+  conole.log(acc, cur)
+  if(cur.owner === "Bob") {
+  return acc + cur.price;
+}
+return acc
+}
+
+let bobsTotal = purchases.reduce(cb, 0)]
+bobsTotal

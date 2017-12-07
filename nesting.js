@@ -4,32 +4,38 @@
 
 // === PROBLEM 1 ===========
 
-var employees = [{
-  "firstName": "Von",
-  "lastName": "Budibent",
-  "email": "vbudibent0@163.com",
-  "department": "Sales"
-}, {
-  "firstName": "Catherina",
-  "lastName": "Swalowe",
-  "email": "cswalowe1@example.com",
-  "department": "Engineering"
-}, {
-  "firstName": "Theo",
-  "lastName": "Trill",
-  "email": "ttrill2@sina.com.cn",
-  "department": "Services"
-}, {
-  "firstName": "Elsy",
-  "lastName": "McCrorie",
-  "email": "emccrorie3@netscape.com",
-  "department": "Legal"
-}, {
-  "firstName": "Lorie",
-  "lastName": "Handsheart",
-  "email": "lhandsheart4@fotki.com",
-  "department": "Research and Development"
-}]
+var employees = [
+	{
+		firstName: 'Von',
+		lastName: 'Budibent',
+		email: 'vbudibent0@163.com',
+		department: 'Sales'
+	},
+	{
+		firstName: 'Catherina',
+		lastName: 'Swalowe',
+		email: 'cswalowe1@example.com',
+		department: 'Engineering'
+	},
+	{
+		firstName: 'Theo',
+		lastName: 'Trill',
+		email: 'ttrill2@sina.com.cn',
+		department: 'Services'
+	},
+	{
+		firstName: 'Elsy',
+		lastName: 'McCrorie',
+		email: 'emccrorie3@netscape.com',
+		department: 'Legal'
+	},
+	{
+		firstName: 'Lorie',
+		lastName: 'Handsheart',
+		email: 'lhandsheart4@fotki.com',
+		department: 'Research and Development'
+	}
+];
 
 // Create a function called 'employeeUpdater'. employeeUpdater will loop over the array above and perform the following:
 //  1. If employee's first name is Theo, remove that employee because he just got fired.
@@ -37,20 +43,18 @@ var employees = [{
 //  3. Return the updated employee array.
 
 // Code here
- var employeeUpdater = () => {
-   for(let i = 0; i < employees.length; i++) {
-     if(employees[i].firstName === 'Theo') {
-     employees.splice(i, 1); // why does the addition of one in splice() let it run?
-   } else if (employees[i].firstName === 'Lorie') {
-     employees[i].department = 'HR';
-   }
-   }
-   return employees;
- }
-
+var employeeUpdater = () => {
+	for (let i = 0; i < employees.length; i++) {
+		if (employees[i].firstName === 'Theo') {
+			employees.splice(i, 1); // why does the addition of one in splice() let it run?
+		} else if (employees[i].firstName === 'Lorie') {
+			employees[i].department = 'HR';
+		}
+	}
+	return employees;
+};
 
 // === PROBLEM 2 ==========
-
 
 // The array below represents IDs tied to reported workplace accidents. An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there actually are.
 // 1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the workplaceAccidents array.
@@ -61,54 +65,46 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 // Code here
 
- var removeDuplicates = () => {
-  for (let i = 0; i < workplaceAccidents.length; i++) {
-    for (let j = i + 1; j < workplaceAccidents.length; j++) {
-      if (workplaceAccidents[i] === workplaceAccidents[j]) {
-        workplaceAccidents.splice(i, 1);
-      }
-    }
-    }
-  return workplaceAccidents
-}
-
-
-
-
-
-
-
-
+var removeDuplicates = () => {
+	for (let i = 0; i < workplaceAccidents.length; i++) {
+		for (let j = i + 1; j < workplaceAccidents.length; j++) {
+			if (workplaceAccidents[i] === workplaceAccidents[j]) {
+				workplaceAccidents.splice(i, 1);
+			}
+		}
+	}
+	return workplaceAccidents;
+};
 
 // === PROBLEM 3 ==========
 
 var cat = {
-  name: 'Fluffy',
-  catFriends: [{
-    name: 'Grumpy',
-    activities: ['be grumpy', 'eat food']
-  }, {
-    name: 'Lazy Bones',
-    activities: ['sleep', 'pre-sleep naps']
-    }]
-}
+	name: 'Fluffy',
+	catFriends: [
+		{
+			name: 'Grumpy',
+			activities: ['be grumpy', 'eat food']
+		},
+		{
+			name: 'Lazy Bones',
+			activities: ['sleep', 'pre-sleep naps']
+		}
+	]
+};
 
 // Fluffy has two friends, Grumpy and Lazy Bones.
 // 1. Assign the value of Grumpy's 2nd activity to the variable below.
 // 2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 
 // Code here
-// //
- var grumpyActivity = cat.catFriends[0].activities[1];
- var fluffy2ndFriend = cat.catFriends[1].name
+// // //
+var fluffy2ndFriend = cat.catFriends[1].name;
+var grumpyActivity = cat.catFriends[0].activities[1];
 
-
-
-
-
-
-
-// === PROBLEM 4 ==========
+// var 'Grumpy' = cat.catFriend[0].assign(activities: 'eat food')
+// var 'Lazy Bones' = cat.catFriends[1].assign(name: 'fluffy2ndfriend');
+//
+// // === PROBLEM 4 ==========
 
 // Below is some information about my car. As you can see, I am not the best driver. I have caused a few accidents. Please update this driving record so that I can feel better about my driving skills.
 
@@ -116,37 +112,39 @@ var cat = {
 // 2. Loop over the accidents array.
 // 3. Change atFaultForAccident from true to false.
 
-var myCar = {
-  make: 'Toyota',
-  model: 'Corolla',
-  year: 1992,
-  accidents: [
-    {
-      date: '3/15/93',
-      damage: '$5,000',
-      atFaultForAccident: true
-    },{
-      date: '7/4/98',
-      damage: '$2,200',
-      atFaultForAccident: true
-    },{
-      date: '6/22/99',
-      damage: '$7,900',
-      atFaultForAccident: true
-    }
-  ]
-}
-
 // Code here
+function recordCleaner(path){
 
-//  var recordCleaner = () => {
-//    for(let i = 0, i < accidents.length, i++) {
-//    accidents[i].atFaultForAccident.false;
-// }
+   for (var i= 0;i < path.accidents.length; i++ ){
+      if (path.accidents[i].atFaultForAccident === true){
+        myCar.accidents[i].atFaultForAccident = false;
+      }
+    }return myCar
+  }
 
-
-
-
+//
+// var myCar = {
+// 	make: 'Toyota',
+// 	model: 'Corolla',
+// 	year: 1992,
+// 	accidents: [
+// 		{
+// 			date: '3/15/93',
+// 			damage: '$5,000',
+// 			atFaultForAccident: true
+// 		},
+// 		{
+// 			date: '7/4/98',
+// 			damage: '$2,200',
+// 			atFaultForAccident: true
+// 		},
+// 		{
+// 			date: '6/22/99',
+// 			damage: '$7,900',
+// 			atFaultForAccident: true
+// 		}
+// 	]
+// };
 
 
 
@@ -159,4 +157,11 @@ var myCar = {
 //    If the number is even, replace it with 'even'.
 // 4. Return the modified numsArr.
 
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+console.log('pre function:', numsArr);
+function looper() {
+	for(i=0; i < arr.length; i++){
+	if(num[i] % 2){}}
+	
+	return looper;
+}
