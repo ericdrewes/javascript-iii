@@ -21,9 +21,9 @@
 
 // In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 
-// for(var key in values) {
-//   console.log(key)
-// }
+for(var key in values) {
+  console.log(key)
+}
 
 
 // ========================
@@ -32,7 +32,11 @@
 // Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 
 function showValues( obj ) {
-  // CODE HERE
+  let newString='';
+  for(var key in obj){
+    newString += obj[key]
+  } 
+  return newString;
 }
 
 
@@ -101,6 +105,14 @@ var deleteTheBigNumbers = {
 }
 
 // CODE HERE
+function deleteTheBigNumbers(obj){
+  for(var key in obj){
+    if(obj[key] > 100){
+      delete obj[key]
+    }
+  }
+  return obj
+}
 
 
 // ========================

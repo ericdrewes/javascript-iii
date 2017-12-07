@@ -113,38 +113,38 @@ var grumpyActivity = cat.catFriends[0].activities[1];
 // 3. Change atFaultForAccident from true to false.
 
 // Code here
-function recordCleaner(path){
+function recordCleaner(){
 
-   for (var i= 0;i < path.accidents.length; i++ ){
-      if (path.accidents[i].atFaultForAccident === true){
+   for (var i= 0;i < myCar.accidents.length; i++ ){
+      if (myCar.accidents[i].atFaultForAccident === true){
         myCar.accidents[i].atFaultForAccident = false;
       }
-    }return myCar
+	}
   }
 
 //
-// var myCar = {
-// 	make: 'Toyota',
-// 	model: 'Corolla',
-// 	year: 1992,
-// 	accidents: [
-// 		{
-// 			date: '3/15/93',
-// 			damage: '$5,000',
-// 			atFaultForAccident: true
-// 		},
-// 		{
-// 			date: '7/4/98',
-// 			damage: '$2,200',
-// 			atFaultForAccident: true
-// 		},
-// 		{
-// 			date: '6/22/99',
-// 			damage: '$7,900',
-// 			atFaultForAccident: true
-// 		}
-// 	]
-// };
+var myCar = {
+	make: 'Toyota',
+	model: 'Corolla',
+	year: 1992,
+	accidents: [
+		{
+			date: '3/15/93',
+			damage: '$5,000',
+			atFaultForAccident: true
+		},
+		{
+			date: '7/4/98',
+			damage: '$2,200',
+			atFaultForAccident: true
+		},
+		{
+			date: '6/22/99',
+			damage: '$7,900',
+			atFaultForAccident: true
+		}
+	]
+};
 
 
 
@@ -159,9 +159,15 @@ function recordCleaner(path){
 
 var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 console.log('pre function:', numsArr);
-function looper() {
+function looper(arr) {
 	for(i=0; i < arr.length; i++){
-	if(num[i] % 2){}}
-	
-	return looper;
+		for (j=0; j < arr[i].length; j++){ 
+			if(arr[i][j] % 2 === 0){
+				return "even"
+			} else {
+				return "odd"
+			}
+		}
+	}
+    return arr;
 }
