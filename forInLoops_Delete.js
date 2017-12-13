@@ -18,24 +18,35 @@
 //   console.log(values[key])
 // }
 
-// In this next example, we are accessing the property names themselves.
-// Uncomment the code below, run it and look at what prints in the console.
+// In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 
 for(var key in values) {
   console.log(key)
 }
+
 
 // ========================
 
 // Inside the function showValues, write a for in loop that concatenates each
 // of the property values and returns the concatenated string.
 
+<<<<<<< HEAD
 function showValues(obj) {
   let string = "";
   for (let key in obj) {
     string += obj[key];
   }
   return string;
+=======
+// Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
+
+function showValues( obj ) {
+  let newString='';
+  for(var key in obj){
+    newString += obj[key]
+  } 
+  return newString;
+>>>>>>> d880cab483fae60c9953ea8490e85c0991e401c0
 }
 console.log(showValues());
 
@@ -127,6 +138,14 @@ var deleteTheBigNumbers = {
 };
 
 // CODE HERE
+function deleteTheBigNumbers(obj){
+  for(var key in obj){
+    if(obj[key] > 100){
+      delete obj[key]
+    }
+  }
+  return obj
+}
 
   for (var key in deleteTheBigNumbers) {
     if (deleteTheBigNumbers[key] > 100) {

@@ -46,7 +46,11 @@ var employees = [
 var employeeUpdater = () => {
 	for (let i = 0; i < employees.length; i++) {
 		if (employees[i].firstName === 'Theo') {
+<<<<<<< HEAD
 			employees.splice(i, 1); 
+=======
+			employees.splice(i, 1); // why does the addition of one in splice() let it run?
+>>>>>>> d880cab483fae60c9953ea8490e85c0991e401c0
 		} else if (employees[i].firstName === 'Lorie') {
 			employees[i].department = 'HR';
 		}
@@ -65,7 +69,11 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 // Code here
 
+<<<<<<< HEAD
 const removeDuplicates = () => {
+=======
+var removeDuplicates = () => {
+>>>>>>> d880cab483fae60c9953ea8490e85c0991e401c0
 	for (let i = 0; i < workplaceAccidents.length; i++) {
 		for (let j = i + 1; j < workplaceAccidents.length; j++) {
 			if (workplaceAccidents[i] === workplaceAccidents[j]) {
@@ -113,6 +121,7 @@ var grumpyActivity = cat.catFriends[0].activities[1];
 // 3. Change atFaultForAccident from true to false.
 
 // Code here
+<<<<<<< HEAD
 function recordCleaner(path){
 
    for (var i= 0;i < path.accidents.length; i++ ){
@@ -145,6 +154,40 @@ function recordCleaner(path){
 // 		}
 // 	]
 // };
+=======
+function recordCleaner(){
+
+   for (var i= 0;i < myCar.accidents.length; i++ ){
+      if (myCar.accidents[i].atFaultForAccident === true){
+        myCar.accidents[i].atFaultForAccident = false;
+      }
+	}
+  }
+
+//
+var myCar = {
+	make: 'Toyota',
+	model: 'Corolla',
+	year: 1992,
+	accidents: [
+		{
+			date: '3/15/93',
+			damage: '$5,000',
+			atFaultForAccident: true
+		},
+		{
+			date: '7/4/98',
+			damage: '$2,200',
+			atFaultForAccident: true
+		},
+		{
+			date: '6/22/99',
+			damage: '$7,900',
+			atFaultForAccident: true
+		}
+	]
+};
+>>>>>>> d880cab483fae60c9953ea8490e85c0991e401c0
 
 
 
@@ -158,14 +201,16 @@ function recordCleaner(path){
 // 4. Return the modified numsArr.
 
 var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
-// console.log('pre function:', numsArr);
-function looper() {
+console.log('pre function:', numsArr);
+function looper(arr) {
 	for(i=0; i < arr.length; i++){
-		if(num[i] % 2){
-			return "even"
-		}else{
-			return "odd";
+		for (j=0; j < arr[i].length; j++){ 
+			if(arr[i][j] % 2 === 0){
+				return "even"
+			} else {
+				return "odd"
+			}
 		}
 	}
+    return arr;
 }
-	return looper;

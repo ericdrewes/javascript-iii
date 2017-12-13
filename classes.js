@@ -37,6 +37,7 @@ call your class Employee and receive all the data in the constructor in the orde
 // call your class Manager
 //
 // */
+<<<<<<< HEAD
 class Manager extends Employee {
 	// redfines without having to write out whole makeWidget(){   }
 	constructor(first_name, last_name, email, age) {
@@ -50,6 +51,41 @@ class Manager extends Employee {
 		this.reports.splice(i, 1);
 	}
 }
+=======
+// class Manager extends Employee {
+// 	// redfines without having to write out whole makeWidget(){   }
+// 	constructor(first_name, last_name, email, age) {
+// 		super(first_name, last_name, email, age);
+// 		this.reports = [];
+// 	}
+// 	hire(employee) {
+// 		this.reports.push(employee);
+// 		return this.props;
+// 	}
+// 	fire(i) {
+// 		this.reports.splice(i, 1);
+// 	}
+// }
+
+/////////done above using extends  which calls upon Employee function.
+
+// class Manager extends Employee {
+// 	// redfines without having to write out whole makeWidget(){   }
+// 	constructor(first_name, last_name, email, age) {
+// 		super(first_name, last_name, email, age);
+// 		this.reports = [];
+// 	}
+// 	hire(employee) {
+// 		this.reports.push(employee);
+// 		return this.reports;
+// 	}
+// 	fire(i) {
+// 		this.reports.splice(i, 1);
+// 	}
+// }
+// return employee.accidents;
+
+>>>>>>> d880cab483fae60c9953ea8490e85c0991e401c0
 // /
 // Manager for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
 // Progressive Managers have all the same properties as the manager, but
