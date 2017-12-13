@@ -106,6 +106,8 @@ class ProgressiveManager extends employee{
 		this.bonus += 100;
   }
 
+}
+
 /*
 BLACK DIAMOND
 Widget Co has a factory that makes widgets.

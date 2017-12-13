@@ -92,15 +92,15 @@ function secrets(obj) {
 
 // Sometimes it's needed to delete object properties. All you need is the word delete before a reference to the object property value. Uncomment the example below to see a for in loop deleting all the properties inside an object.
 
-// var deleteAllThethings = {
-//   one: 1,
-//   two: 2,
-//   three: 3
-// }
+var deleteAllThethings = {
+  one: 1,
+  two: 2,
+  three: 3
+}
 
-// for(var key in deleteAllThethings) {
-//   delete deleteAllThethings[key]
-// }
+for(var key in deleteAllThethings) {
+  delete deleteAllThethings[key]
+}
 
 // console.log(deleteAllThethings)
 
@@ -127,14 +127,12 @@ var deleteTheBigNumbers = {
 };
 
 // CODE HERE
-function deleteTheBigNumbers(obj) {
-  for (var key in obj) {
-    if (obj[key] > 100) {
-      delete obj[key];
+
+  for (var key in deleteTheBigNumbers) {
+    if (deleteTheBigNumbers[key] > 100) {
+      delete deleteTheBigNumbers[key];
     }
   }
-  return obj;
-}
 
 // ========================
 
@@ -165,7 +163,7 @@ function startsWithK(obj){
 function hiddenTreasure(obj){
   for(var key in obj){
     if(obj[key] !== 'treasure'){
-      delete obj[key]
+      delete obj
     }
   }
   return obj;

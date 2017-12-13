@@ -27,7 +27,7 @@ let evenNumbers = mixedNumbers.filter((i) => {
 const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 
 let postTaxPrices = prices.map((element) => {
-    return element += (element * 1.07);
+    return element += (prices * 1.07);
 });
 
 

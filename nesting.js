@@ -160,7 +160,7 @@ function recordCleaner(path){
 var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 // console.log('pre function:', numsArr);
 function looper() {
-	for(i=0; i < arr.length < i++){
+	for(i=0; i < arr.length; i++){
 		if(num[i] % 2){
 			return "even"
 		}else{
